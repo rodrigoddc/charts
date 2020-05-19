@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div class="container">
+    <h1>Django Chart</h1>
+    <button id="chart" class="btn btn-primary">Generate Chart</button>
+</div>
+<div class="container h-100">
+    {% csrf_token %}
+    <canvas id="graph" ></canvas>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'core/js/main.js' %}"></script>
+{% endblock %}

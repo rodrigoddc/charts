@@ -1,0 +1,42 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap 4 css -->
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+
+    -<!-- Chart.js and JQuery must be here to be loaded soon as page is loaded -->
+    <!-- Chart.js -->
+    <link rel="stylesheet" href="{% static 'core/css/chart.min.css' %}">
+    <script src="{% static 'core/js/chart.min.js' %}"></script>
+
+    <!-- JQuery  v3.5.1 -->
+    <script src="{% static 'core/js/jquery.min.js' %}"></script>
+
+
+    <title>Django Chart</title>
+
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            {% block main %}
+            {% endblock %}
+        </div>
+    </main>
+
+
+    <!--Bootstrap 4 js -->
+    <script src="{% static 'core/js/popper.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+</html>
